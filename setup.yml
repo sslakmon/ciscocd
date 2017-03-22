@@ -8,8 +8,17 @@
     git:
      repo: https://github.com/sslakmon/ciscocd.git
      dest: /home/ec2-user/ciscocd/
+     update: no
   - name: clone cisocd
     git:
      repo: https://github.com/sslakmon/spring-petclinic.git 
      dest: /home/ec2-user/petclinic/
+     update: no
+  - name: download maven
+    unarchive:
+     src: http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+     dest: /home/ec2-user/
+     remote_src: True
+
+
     
